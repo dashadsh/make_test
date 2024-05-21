@@ -1,14 +1,15 @@
-// tests/test_ft_strlen.c
+// tests/test_ft_strcpy.c
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
 
-void test_ft_strlen() {
-    printf("Test ft_strlen:\n");
-    char *str = "Hello, World!";
-    size_t result = ft_strlen(str);
-    printf("Input: \"%s\"\n", str);
-    printf("Expected: %zu\n", strlen(str));
-    printf("Got: %zu\n", result);
-    printf(result == strlen(str) ? "PASS\n" : "FAIL\n");
+void test_ft_strcpy() {
+    printf("Test ft_strcpy:\n");
+    char src[50] = "Hello, World!";
+    char dest[50];
+    ft_strcpy(dest, src);
+    printf("Source: \"%s\"\n", src);
+    printf("Expected: \"%s\"\n", src);
+    printf("Got: \"%s\"\n", dest);
+    printf(strcmp(dest, src) == 0 ? "PASS\n" : "FAIL\n");
 }
